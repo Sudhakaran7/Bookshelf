@@ -1,0 +1,84 @@
+We have a sequence of books: the i-th book has thickness books[i][0] and height books[i][1].
+We want to place these books in order onto bookcase shelves that have total width shelf_width.
+We choose some of the books to place on this shelf (such that the sum of their thickness is <= shelf_width), then build another level of shelf of the bookcase so that 
+the total height of the bookcase has increased by the maximum height of the books we just put down.  We repeat this process until there are no more books to place.
+Note again that at each step of the above process, the order of the books we place is the same order as the given sequence of books.  For example, if we have an ordered 
+list of 5 books, we might place the first and second book onto the first shelf, the third book on the second shelf, and the fourth and fifth book on the last shelf.
+Return the minimum possible height that the total bookshelf can be after placing shelves in this manner.
+
+Input Description:
+First line contains, N and Shelf width, integers as input.(1<N,Self width<1000)
+Rest line contains, Nx2 rows of integers in a matrix.
+
+Output Description:
+Print the minimum possible height that the total bookshelf can be after placing shelves in this manner.
+
+Sample Input:
+7 4
+1 1
+2 3
+2 3
+1 1
+1 1
+1 1
+1 2
+
+Sample Output:
+6
+
+Explanation:
+The sum of the heights of the 3 shelves are 1 + 3 + 2 = 6.
+Notice that book number 2 does not have to be on the first shelf.
+
+Sample Input:
+5 3
+1 1
+1 2
+3 3
+0 1
+2 2
+
+Sample Output:
+7
+
+Sample Input:
+3 3
+0 1
+1 0
+1 1
+
+Sample Output:
+1
+
+Sample Input:
+4 6
+2 2
+1 1
+2 1
+1 2
+
+Sample Output:
+2
+
+Sample Input:
+5 8
+2 3
+3 3
+1 1
+3 2
+3 1
+
+Sample Output:
+5
+
+Sample Input:
+6 9
+2 3
+4 5
+6 3
+1 7
+6 2
+1 8
+
+Sample Output:
+16
